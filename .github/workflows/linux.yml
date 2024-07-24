@@ -29,7 +29,8 @@ jobs:
     - name: Build
       run: |
         perl Build.PL
-        COLUMNS=120 ./Build verbose=1
+        ./Build installdeps
+        ./Build verbose=1
 
     - name: Test
       run: ./Build test verbose=1
