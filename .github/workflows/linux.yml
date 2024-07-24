@@ -28,8 +28,8 @@ jobs:
 
     - name: Build
       run: |
-        perl Build.PL
-        ./Build verbose=1
+        sudo perl Build.PL
+        sudo ./Build verbose=1
 
     - name: Test
       run: ./Build test verbose=1
