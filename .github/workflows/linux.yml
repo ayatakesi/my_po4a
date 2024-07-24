@@ -33,3 +33,17 @@ jobs:
 
     - name: Test
       run: ./Build test verbose=1
+
+    - name: Commit
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
+      run: |
+        git config --global user.email "ayanokoji.takesi@gmail.com"
+        git config --global user.name "ayatakesi"
+        git add -f -A
+        if git commit -m 'Build po4a completed?'
+        then
+          git push https://${GH_PAT}@github.com/ayatakesi/my-po4a.git
+        else
+          echo "Commit failed, ...continue"
+        fi
