@@ -1,0 +1,218 @@
+Test Lists
+==========
+
+Bulleted and Numbered Lists
+---------------------------
+
+- List item.
+- List item which content spans over several lines (missing leading indent)
+* List item.
+
+.  Integer numbered list item.
+1. Integer numbered list item with optional numbering.
+.. Lowercase letter numbered list item.
+a. Lowercase letter numbered list item with optional numbering.
+... Third level of numbered list.
+
+- Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+  * Fusce euismod commodo velit.
+  * Qui in magna commodo, est labitur dolorum an. Est ne magna primis adolescens. Sit munere ponderum dignissim et. Minim luptatum et vel.
+  * Vivamus fringilla mi eu lacus.
+  * Donec eget arcu bibendum nunc consequat lobortis.
+- Nulla porttitor vulputate libero.
+  . Fusce euismod commodo velit.
+  . Vivamus fringilla mi eu lacus.
+    .. Fusce euismod commodo velit.
+    .. Vivamus fringilla mi eu lacus.
+  . Donec eget arcu bibendum nunc consequat lobortis.
+- Praesent eget purus quis magna eleifend eleifend.
+  1. Fusce euismod commodo velit.
+    a. Fusce euismod commodo velit.
+    b. Vivamus fringilla mi eu lacus.
+    c. Donec eget arcu bibendum nunc consequat lobortis.
+  2. Vivamus fringilla mi eu lacus.
+  3. Donec eget arcu bibendum nunc consequat lobortis.
+  4. Nam fermentum mattis ante.
+
+* List Item 1
+** Non-indented new list Item
+** Another Item
+* List Item 2
+* List Item 3
+** Non-indented new list Item 2
+
+Vertical Labeled Lists
+----------------------
+
+Lorem::
+  Fusce euismod commodo velit.
+
+  Fusce euismod commodo velit.
+
+Ipsum::
+  Vivamus fringilla mi eu lacus.
+  * Vivamus fringilla mi eu lacus.
+  * Donec eget arcu bibendum nunc consequat lobortis.
+Dolor::
+  Donec eget arcu bibendum nunc consequat lobortis.
+  Suspendisse;;
+    A massa id sem aliquam auctor.
+  Morbi;;
+    Pretium nulla vel lorem.
+  In;;
+    Dictum mauris in urna.
+
+<pathspec>...::
+	Files to add content from. Fileglobs (e.g. `*.c`) can be given to add all matching files.
+
+-n::
+--dry-run::
+	Don't actually add the file(s), just show if they exist and/or will be ignored.
+
+\--::
+	This option can be used to separate command-line options from the list of files, (useful when filenames might be mistaken for command-line options).
+
+[<refname>...]::
+        A list of references used to limit the references reported as available.
+
+$(prefix)/etc/gitconfig::
+        System-wide configuration file.
+
+~/.gitconfig::
+        User-specific configuration file. Also called "global" configuration file.
+
+%G::
+        Git directory name
+
+Horizontal Labeled Lists
+------------------------
+
+*Lorem*:: Fusce euismod commodo velit. Qui in magna commodo, est labitur dolorum an. Est ne magna primis adolescens.
+
+  Fusce euismod commodo velit.
+  Fusce euismod commodo velit.
+
+*Ipsum*:: Vivamus fringilla mi eu lacus.
+- Vivamus fringilla mi eu lacus.
+- Donec eget arcu bibendum nunc consequat lobortis.
+
+*Dolor*:: \
+  - Vivamus fringilla mi eu lacus.
+  - Donec eget arcu bibendum nunc consequat lobortis.
+
+*Lorem*:: Fusce euismod commodo velit. Qui in magna commodo, est labitur dolorum an. Est ne magna primis adolescens.
+
+*Lorem*::: Fusce euismod commodo velit. Qui in magna commodo, est labitur dolorum an. Est ne magna primis adolescens.
+
+*Dolor*:::
+    Vivamus fringilla mi eu lacus.
+
+Question and Answer Lists
+-------------------------
+Question one??
+        Answer one.
+Question two??
+        Answer two.
+
+Glossary Lists
+--------------
+
+A glossary term:-
+    The corresponding definition.
+A second glossary term:-
+    The corresponding definition.
+
+Bibliography Lists
+------------------
+
++ [[[taoup]]] Eric Steven Raymond. 'The Art of UNIX Programming'. Addison-Wesley. ISBN 0-13-142901-9.
++ [[[walsh-muellner]]] Norman Walsh & Leonard Muellner. 'DocBook - The Definitive Guide'. O'Reilly & Associates. 1999. ISBN 1-56592-580-7.
+
+The same in a bibliography section, and without the doc typo
+
+Bibliography
+------------
++ [[[taoup]]] Eric Steven Raymond. 'The Art of UNIX Programming'. Addison-Wesley. ISBN 0-13-142901-9.
++ [[[walsh-muellner]]] Norman Walsh & Leonard Muellner. 'DocBook - The Definitive Guide'. O'Reilly & Associates. 1999. ISBN 1-56592-580-7.
+
+List Item Continuation
+----------------------
+
+1. List item one.
++
+List item one continued with a second paragraph followed by an Indented block.
++
+.................
+$ ls *.sh
+$ mv *.sh ~/tmp
+.................
++
+List item one continued with a third paragraph.
+
+2. List item two.
+
+   List item two literal paragraph (no continuation required).
+   (but this should not be wrapped).
+
+-  Nested list (item one).
+
+   Nested list literal paragraph (no continuation required).
+   (but this should not be wrapped).
++
+Nested list appended list item one paragraph
+
+-  Nested list item two.
+
+
+List Block
+----------
+
+.Nested List Block
+1. List item one.
++
+This paragraph is part of the preceding list item
++
+--
+a. This list is nested and does not require explicit item continuation.
+
+This paragraph is part of the preceding list item
+
+b. List item b.
+
+This paragraph belongs to list item b.
+--
++
+This paragraph belongs to item 1.
+
+2. Item 2 of the outer list.
+
+.Literal Paragraph in a Vertical Labeled Lists
+
+This comes from the git doc, on which po4a used to fail miserably.
+
+patch::
+
+  This lets you choose one path out of a 'status' like selection. After choosing the path, it presents the diff between the index and the working tree file and asks you if you want to stage the change of each hunk. You can select one of the following options and type return:
+
+       y - stage this hunk
+       n - do not stage this hunk
+       q - quit; do not stage this hunk or any of the remaining ones
+       a - stage this hunk and all later hunks in the file
+       d - do not stage this hunk or any of the later hunks in the file
+       g - select a hunk to go to
+       / - search for a hunk matching the given regex
+       j - leave this hunk undecided, see next undecided hunk
+       J - leave this hunk undecided, see next hunk
+       k - leave this hunk undecided, see previous undecided hunk
+       K - leave this hunk undecided, see previous hunk
+       s - split the current hunk into smaller hunks
+       e - manually edit the current hunk
+       ? - print help
++
+After deciding the fate for all hunks, if there is any hunk that was chosen, the index is updated with the selected hunks.
+
+. First level
+.. Second level
+... Third level
+.... Fourth level
+..... Fifth level

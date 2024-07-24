@@ -1,0 +1,8 @@
+Updating single.pot: (4 entries)
+Updating single.fr.po:39: 'msgid' and 'msgstr' entries do not both end with '\n'
+msgfmt: found 1 fatal error
+tmp/cfg/single-invalid-srcdst/single.fr.po: 4 translated messages.
+Invalid po file tmp/cfg/single-invalid-srcdst/single.fr.po:
+tmp/cfg/single-invalid-srcdst/single.fr.po:39: 'msgid' and 'msgstr' entries do not both end with '\n'
+msgfmt: found 1 fatal error
+

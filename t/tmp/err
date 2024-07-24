@@ -1,0 +1,7 @@
+t-13-plural/pod2.po:72: (po4a::po)
+Messages with more than 2 plural forms are not supported.
+po4a gettextize: 'singular' is the singular form of a message, po4a will use the msgstr[0] translation (singulier).
+po4a gettextize: 'plural' is the plural form of a message, po4a will use the msgstr[1] translation (pluriel).
+Your input po file t-13-plural/pod2.po seems outdated (msgid declared in one file only:   This is a verbatim paragraph.\n
+
+). Please consider running po4a-updatepo to refresh it.

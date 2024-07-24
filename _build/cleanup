@@ -1,0 +1,7 @@
+do{ my $x = {
+       '_build' => 1,
+       'blib' => 1,
+       'po/bin/*.gmo' => 1,
+       't/tmp' => 1
+     };
+$x; }
