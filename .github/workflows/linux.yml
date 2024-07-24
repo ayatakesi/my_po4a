@@ -2,12 +2,7 @@
 name: Build on Linux CI
 
 on:
-  push:
-    branches:
-      - '*'
-    tags-ignore:
-      - '*'
-  pull_request:
+  workflow_dispatch:
 
 jobs:
   build:
